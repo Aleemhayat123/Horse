@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ottoman Horse — AR</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7f8;color:#17202a}
+    main{max-width:760px;margin:auto;padding:18px} .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+    model-viewer{width:100%;height:70vh;min-height:480px;background:linear-gradient(#eef4f7,#fff)}
+    .copy{padding:18px 20px 22px} h1{font-size:24px;margin:0 0 8px}.copy p{margin:0;color:#52606d;line-height:1.5}
+    #ar-button{background:#111827;color:white;border:0;border-radius:999px;padding:14px 20px;font-size:16px;font-weight:700;position:absolute;left:50%;bottom:22px;transform:translateX(-50%);box-shadow:0 5px 18px rgba(0,0,0,.2)}
+    .hint{position:absolute;top:16px;left:16px;right:16px;text-align:center;background:rgba(255,255,255,.9);padding:9px 12px;border-radius:999px;font-size:13px;color:#475569}
+  </style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <model-viewer
+      src="horse.glb"
+      alt="3D model of a cozy knitted snowman"
+      camera-controls
+      touch-action="pan-y"
+      auto-rotate
+      shadow-intensity="1"
+      environment-image="neutral"
+      exposure="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      ar-placement="floor">
+      <div class="hint">Drag to rotate • Pinch to zoom</div>
+      <button slot="ar-button" id="ar-button">View in AR</button>
+    </model-viewer>
+    <div class="copy">
+      <h1>Ottoman Horse</h1>
+      <p>Tap <strong>View in AR</strong>, move your phone slowly to detect a surface, then place the snowman in your space.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
